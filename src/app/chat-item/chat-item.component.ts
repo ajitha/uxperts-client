@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ExpertUser } from '../Interfaces/ExpertUser';
 
 @Component({
   selector: 'app-chat-item',
@@ -8,6 +9,12 @@ import { Component, Input } from '@angular/core';
 export class ChatItemComponent {
 
   @Input()
-  message: string = 'Default message'
+  content: string = ''
 
+  @Input()
+  sender: 'AI' | 'User' = 'User'
+
+  avatarUrl?: string;
+  
+  expertUsers?: ExpertUser[];
 }

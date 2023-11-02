@@ -2,7 +2,9 @@
     <div *ngIf="chatOpen" class="chat-box">
         <div class="chat-content">
             <app-chat-item *ngFor="let msg of messageQueue"
-                [message]="msg.content">
+                [content]="msg.content"
+                [sender]="msg.sender"
+                >
             </app-chat-item>
         </div>
         <div class="chat-input">

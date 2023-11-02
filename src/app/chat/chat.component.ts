@@ -8,7 +8,7 @@ import { Message } from '../Interfaces/message';
 })
 export class ChatComponent {
   currentMessageIndex: number = 0;
-  chatOpen: boolean = true;
+  chatOpen: boolean = false;
   messageQueue: Message[] = [];
 
   constructor() { }
