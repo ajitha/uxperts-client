@@ -1,5 +1,14 @@
 <div class="container">
     <div *ngIf="chatOpen" class="chat-box">
+        <div class="chat-content">
+            <app-chat-item *ngFor="let msg of messageQueue"
+                [message]="msg.content">
+            </app-chat-item>
+        </div>
+        <div class="chat-input">
+            <input #inputText type="text" placeholder="Type your message here..." />
+            <button class="btn btn-primary" (click)="sendMessage(inputText.value); inputText.value = ''" >Send</button>
+        </div>
     </div>
     
     <div class="chat-icon">

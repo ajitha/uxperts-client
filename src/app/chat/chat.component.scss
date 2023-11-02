@@ -28,9 +28,53 @@
   .chat-box {
     width: 350px;
     min-height: 500px;
-    box-shadow: #eeeeee 4px 4px 2px 0px;
+    box-shadow: #eeeeee 3px 6px 7px 2px;
     border: 1px solid #eeeeee;
     margin-bottom: 20px;
-    background: white;
+    background: #f9f9f9;
     z-index: 10;
+    position: relative;
+
+    .chat-input {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+
+      input {
+        flex-grow: 1;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        margin-inline-end: 0;;
+      }
+      button {
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        &:hover {
+          background-color: #dadada;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .chat-content {
+    max-height: calc(70vh - 100px);
+    overflow: overlay;
+    margin-bottom: 62px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: #dadada;
+      border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #fff
+  }
   }
