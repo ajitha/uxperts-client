@@ -1,0 +1,22 @@
+<div class="main">
+    <div class="container">
+        <img [src]="user?.avatarUrl ?? 'https://www.businessnetworks.com/sites/default/files/default_images/default-avatar.png'" class="avatar">
+    
+        <div class="sub">
+            <div class="name">
+                {{ user?.username }}
+            </div>
+            <div class="email">
+                {{ user?.email }}
+            </div>
+        </div>
+
+        <a class="contact" [href]="'mailto:' + user?.email">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4V13H15V4H1ZM13.4 5L8 8.5L2.6 5H13.4ZM14 12H2V5.8L8 9.7L14 5.8V12Z" fill="#1A1B1D"/>
+            </svg>
+        </a>
+    </div>
+    
+    
+</div>

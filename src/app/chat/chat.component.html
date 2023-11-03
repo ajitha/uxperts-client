@@ -5,12 +5,13 @@
                 [content]="msg.content"
                 [sender]="msg.sender"
                 [loading]="msg.loading? true : false"
+                [expertUsers]="msg.expertUsers"
                 >
             </app-chat-item>
         </div>
         <div class="chat-input">
             <input #inputText type="text" (keyup.enter)="sendMessage(inputText.value); inputText.value = ''" placeholder="Type your message here..." />
-            <button class="btn btn-primary" (click)="sendMessage(inputText.value); inputText.value = ''" >Send</button>
+            <button class="btn btn-primary" (click)="sendMessage(inputText.value); inputText.value = ''" [disabled]="pendingResponse">Send</button>
         </div>
     </div>
     

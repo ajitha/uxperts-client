@@ -5,5 +5,11 @@
         <span class="loading__dot"></span>
         <span class="loading__dot"></span>
     </div>
+
+    <div *ngIf="expertUsers && expertUsers.length > 0" class="expert-users">
+        <app-expert-user-badge *ngFor="let user of expertUsers"
+            [user]="user">
+        </app-expert-user-badge>
+    </div>
 </div>
 

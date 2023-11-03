@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { ChatItemComponent } from './chat-item/chat-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExpertUserBadgeComponent } from './expert-user-badge/expert-user-badge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
-    ChatItemComponent
+    ChatItemComponent,
+    ExpertUserBadgeComponent
   ],
   imports: [
     BrowserModule,

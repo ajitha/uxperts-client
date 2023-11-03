@@ -11,6 +11,7 @@ export class ChatComponent {
   currentMessageIndex: number = 0;
   chatOpen: boolean = false;
   messageQueue: Message[] = [];
+  pendingResponse: boolean = false;
 
   constructor(
     private messageService: MessageService
@@ -18,7 +19,7 @@ export class ChatComponent {
 
   sendMessage(message: string) {
 
-    if(message !== '') {
+    if(message !== '' && !this.pendingResponse) {
       this.messageQueue.push({
         index: this.currentMessageIndex,
         content: message,
@@ -34,9 +35,10 @@ export class ChatComponent {
         loading: true
       };
       this.messageQueue.push(tempAIMessage);
+      this.pendingResponse = true;
 
       this.messageService.sendMessage(message).subscribe((response: any) => {
-        console.log(response);
+        this.pendingResponse = false;
         this.messageQueue.pop();
         this.messageQueue.push({
           index: this.currentMessageIndex,

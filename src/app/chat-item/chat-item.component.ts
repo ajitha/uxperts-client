@@ -16,7 +16,7 @@ export class ChatItemComponent {
   @Input()
   loading: boolean = false;
 
-  avatarUrl?: string;
-  
+  // avatarUrl?: string;
+  @Input()
   expertUsers?: ExpertUser[];
 }
