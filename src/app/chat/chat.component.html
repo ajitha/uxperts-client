@@ -9,7 +9,7 @@
             </app-chat-item>
         </div>
         <div class="chat-input">
-            <input #inputText type="text" placeholder="Type your message here..." />
+            <input #inputText type="text" (keyup.enter)="sendMessage(inputText.value); inputText.value = ''" placeholder="Type your message here..." />
             <button class="btn btn-primary" (click)="sendMessage(inputText.value); inputText.value = ''" >Send</button>
         </div>
     </div>

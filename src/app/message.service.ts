@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -12,9 +12,7 @@ export class MessageService {
 
   sendMessage(message: string) {
     return this.http.get('http://localhost:4000/getExpertUsers', {
-      params: {
-        message: message
-      }
+      params: new HttpParams().set('message', message)
     });
   }
 }

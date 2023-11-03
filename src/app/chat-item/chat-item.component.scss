@@ -2,7 +2,6 @@
     background-color: white;
     padding: 10px;
     margin: 10px;
-    box-shadow: #eeeeee 3px 6px 7px 2px;
     border-radius: 5px;
 }
 
@@ -12,6 +11,7 @@
 
 .ai-sent {
     margin-inline-end: 30px;
+    background-color: #dceaf8;
 
     &.loading {
         width: 50px;
@@ -30,9 +30,9 @@
     animation: dot ease-in-out 1s infinite;
     background-color: grey;
     display: inline-block;
-    height: 7px;
-    margin: 4px;
-    width: 7px;
+    height: 5px;
+    margin: 2px;
+    width: 5px;
     border-radius: 10px;
   }
   
