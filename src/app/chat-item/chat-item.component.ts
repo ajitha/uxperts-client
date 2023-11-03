@@ -7,12 +7,14 @@ import { ExpertUser } from '../Interfaces/ExpertUser';
   styleUrls: ['./chat-item.component.scss']
 })
 export class ChatItemComponent {
-
   @Input()
   content: string = ''
 
   @Input()
   sender: 'AI' | 'User' = 'User'
+
+  @Input()
+  loading: boolean = false;
 
   avatarUrl?: string;
   

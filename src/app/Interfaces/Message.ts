@@ -4,6 +4,7 @@ export interface Message {
     index: number;
     content: string;
     sender: 'AI' | 'User';
-    avatarUrl?: string;
+    loading?: boolean;
+    // avatarUrl?: string;
     expertUsers?: ExpertUser[];
 }

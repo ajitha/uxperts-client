@@ -4,6 +4,7 @@
             <app-chat-item *ngFor="let msg of messageQueue"
                 [content]="msg.content"
                 [sender]="msg.sender"
+                [loading]="msg.loading? true : false"
                 >
             </app-chat-item>
         </div>

@@ -3,6 +3,7 @@
     padding: 10px;
     margin: 10px;
     box-shadow: #eeeeee 3px 6px 7px 2px;
+    border-radius: 5px;
 }
 
 .user-sent {
@@ -11,4 +12,40 @@
 
 .ai-sent {
     margin-inline-end: 30px;
+
+    &.loading {
+        width: 50px;
+    }
 }
+
+.loading {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .loading__dot {
+    animation: dot ease-in-out 1s infinite;
+    background-color: grey;
+    display: inline-block;
+    height: 7px;
+    margin: 4px;
+    width: 7px;
+    border-radius: 10px;
+  }
+  
+  .loading__dot:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .loading__dot:nth-of-type(3) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes dot {
+    0% { background-color: rgb(194, 194, 194); transform: scale(1); }
+    50% { background-color: #838383; transform: scale(1.3); }
+    100% { background-color: rgb(202, 202, 202); transform: scale(1); }
+  }
